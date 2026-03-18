@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FastAPI Tester</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+        body{
+            font-family: Arial;
+            margin: 40px;
+        }
+
+        input{
+            margin: 5px;
+            padding: 6px;
+        }
+
+        button{
+            padding: 8px 15px;
+        }
+
+        #result{
+            margin-top:20px;
+            background:#f4f4f4;
+            padding:10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>FastAPI Test UI</h2>
+
+<label>Query:</label>
+<input type="text" id="name">
+
+<br>
+
+<!-- <label>Age:</label> -->
+<!-- <input type="number" id="age"> -->
+
+<!-- <br><br> -->
+
+<button id="sendBtn">Ask</button>
+
+<h3>Response</h3>
+<div id="result"></div>
+
+<script>
+
+$("#sendBtn").click(function(){
+
+    var data = {
+        name: $("#name").val(),
+        <!-- age: parseInt($("#age").val()) -->
+    };
+
+    $.ajax({
+        url: "http://127.0.0.1:8000/chat?session_id=1",
+        type: "POST",
+        contentType: "application/json",
+        data: JSON.stringify(data),
+
+        success: function(response){
+            $("#result").html(
+                "<pre>" + JSON.stringify(response, null, 2) + "</pre>"
+            );
+        },
+
+        error: function(error){
+            $("#result").html("Error calling API");
+        }
+    });
+
+});
+
+</script>
+
+</body>
+</html>

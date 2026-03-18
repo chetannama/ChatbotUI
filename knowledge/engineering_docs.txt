@@ -1,0 +1,104 @@
+1. Engineers must follow the official coding standards defined by the engineering team.
+2. All source code must be stored in the version control system.
+3. Developers should write clean and readable code.
+4. Code should follow consistent naming conventions.
+5. Variables should have meaningful names.
+6. Functions should be small and focused on a single responsibility.
+7. Comments should be added for complex logic.
+8. Magic numbers should be avoided in code.
+9. Constants should be defined for repeated values.
+10. Developers should follow the DRY principle.
+11. Code formatting should follow the agreed style guide.
+12. Indentation should be consistent throughout the codebase.
+13. Code duplication should be minimized.
+14. Engineers should avoid deeply nested logic.
+15. Logging should be added for critical operations.
+16. Exceptions should be handled properly.
+17. Error messages should be clear and descriptive.
+18. Developers should avoid hardcoded configuration values.
+19. Sensitive data must never be stored in source code.
+20. Configuration values should be stored in configuration files.
+
+21. All code changes must go through a code review process.
+22. Engineers must create pull requests for code changes.
+23. Pull requests should include a clear description of changes.
+24. Code reviewers should verify code quality and functionality.
+25. Code reviewers should check for security issues.
+26. Automated tests should pass before code review approval.
+27. Large pull requests should be avoided.
+28. Pull requests should be focused on a single feature or fix.
+29. Engineers must address review comments promptly.
+30. Code should not be merged without at least one approval.
+31. Engineers should provide constructive feedback during reviews.
+32. Reviewers should verify coding standards compliance.
+33. Code reviewers should check performance considerations.
+34. Reviewers should ensure adequate test coverage.
+35. All discussions should remain professional and respectful.
+36. Engineers should avoid merging untested code.
+37. Pull requests should reference related tasks or tickets.
+38. Code reviewers should verify documentation updates.
+39. Engineers must ensure backward compatibility where required.
+40. Code review discussions should be resolved before merging.
+
+41. Unit tests must be written for critical business logic.
+42. Tests should cover edge cases and error conditions.
+43. Automated tests should run in the CI pipeline.
+44. Test cases should be clear and maintainable.
+45. Mocking should be used for external dependencies.
+46. Integration tests should validate system interactions.
+47. Engineers should maintain high test coverage.
+48. Failed tests must be fixed before deployment.
+49. Tests should be deterministic and repeatable.
+50. Performance tests should be conducted for critical systems.
+51. Test environments should mirror production as closely as possible.
+52. Engineers should avoid flaky tests.
+53. Regression tests should run before releases.
+54. Security tests should be included in the testing process.
+55. Test reports should be reviewed regularly.
+56. Engineers should document complex test cases.
+57. Load testing should be performed for high traffic systems.
+58. Test data should be anonymized when necessary.
+59. Test failures should be investigated immediately.
+60. Testing should be integrated early in the development cycle.
+
+61. Deployments should be automated through CI/CD pipelines.
+62. Engineers should verify builds before deployment.
+63. Production deployments should require approval.
+64. Deployment scripts should be version controlled.
+65. Rollback mechanisms must be available for deployments.
+66. Engineers should monitor deployments closely.
+67. Release notes should be prepared for each deployment.
+68. Deployments should be scheduled during low traffic periods.
+69. Feature flags may be used to control new functionality.
+70. Engineers should verify system health after deployment.
+71. Monitoring tools should track application performance.
+72. Alerts should be configured for critical failures.
+73. Logs should be collected for troubleshooting.
+74. Deployment processes should be documented.
+75. Engineers must follow security practices during deployment.
+76. Secrets should be managed through secure vault systems.
+77. Engineers should avoid manual production changes.
+78. Infrastructure should be managed using automation tools.
+79. Backup procedures should be validated regularly.
+80. Engineers should ensure zero downtime deployments when possible.
+
+81. Systems should be designed with scalability in mind.
+82. Microservices architecture may be used for large systems.
+83. APIs should follow RESTful design principles.
+84. Systems should be loosely coupled.
+85. High availability should be considered during system design.
+86. Engineers should design systems for fault tolerance.
+87. Caching should be used to improve performance.
+88. Databases should be indexed appropriately.
+89. Engineers should consider data consistency models.
+90. Systems should be designed to handle peak traffic.
+91. Rate limiting should be implemented for public APIs.
+92. API responses should be optimized for performance.
+93. Engineers should follow API versioning practices.
+94. System components should be independently deployable.
+95. Distributed systems should handle network failures.
+96. Engineers should design for observability.
+97. Metrics should be collected for system monitoring.
+98. Documentation should accompany system architecture.
+99. Security should be considered during system design.
+100. Engineers should conduct architecture reviews.

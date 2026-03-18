@@ -1,0 +1,68 @@
+name: Deploy FastAPI to Azure App Service
+
+on:
+  push:
+    branches:
+      - main        # Change if you want 'develop' or 'feature/*'
+      - develop
+      - 'feature/*'
+
+env:
+  AZURE_WEBAPP_NAME: ChatbotFrontend  # Set your Azure App Service name
+  PYTHON_VERSION: 3.13
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    # -----------------------------
+    # 1️⃣ Checkout your repo
+    # -----------------------------
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    # -----------------------------
+    # 2️⃣ Setup Python
+    # -----------------------------
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: ${{ env.PYTHON_VERSION }}
+
+    # -----------------------------
+    # 3️⃣ Install dependencies
+    # -----------------------------
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    # -----------------------------
+    # 4️⃣ Optional: Run tests
+    # -----------------------------
+    # Uncomment if you have tests
+    #- name: Run tests
+    #  run: pytest
+
+    # -----------------------------
+    # 5️⃣ Zip the project for deployment
+    # -----------------------------
+    - name: Zip project
+      run: zip -r release.zip .
+
+    # -----------------------------
+    # 6️⃣ Deploy to Azure
+    # -----------------------------
+    - name: Deploy to Azure Web App
+      uses: azure/webapps-deploy@v3
+      with:
+        app-name: ${{ env.AZURE_WEBAPP_NAME }}
+        publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+        package: release.zip
+
+    # -----------------------------
+    # 7️⃣ Force Node.js 24 for actions (fix deprecation warning)
+    # -----------------------------
+    - name: Opt into Node.js 24 for Actions
+      run: echo "FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true" >> $GITHUB_ENV
