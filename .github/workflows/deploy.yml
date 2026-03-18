@@ -8,7 +8,7 @@ on:
       - 'feature/*'
 
 env:
-  AZURE_WEBAPP_NAME: ChatbotFrontend  # Set your Azure App Service name
+  AZURE_WEBAPP_NAME: ChabotFrontend  # Set your Azure App Service name
   PYTHON_VERSION: 3.13
 
 jobs:

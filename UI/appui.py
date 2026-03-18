@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 import uuid
 
-st.title("Chatbot Agent Chat UI")
+st.title("Welcome to Chetan-Chatbot")
 
 # Create session id for conversation
 if "session_id" not in st.session_state:
