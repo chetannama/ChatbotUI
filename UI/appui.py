@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 import uuid
 
-st.title("Welcome to Chetan-Chatbot")
+st.title("Chatbot Agent Chat UI")
 
 # Create session id for conversation
 if "session_id" not in st.session_state:
@@ -35,7 +35,7 @@ if prompt:
     url = "https://chatbotwithrag-hxgueweaegaue8b3.centralindia-01.azurewebsites.net/chat"
 
     payload = {
-        "question": prompt
+        "question": prompt,
     }
 
     params = {
